@@ -23,7 +23,7 @@ Make it so that it is no longer possible to execute flash loans.
 ## Critical Risk
 ### Incorrect equality in assert statement
 
-**Context:** [`UnstoppableLender.sol#L40`](https://github.com/tinchoabbate/damn-vulnerable-defi/blob/v2.0.0/contracts/unstoppable/UnstoppableLender.sol)
+**Context:** [`UnstoppableLender.sol#L40`](https://github.com/tahos81/damn-vulnerable-defi-solutions/blob/master/contracts/unstoppable/UnstoppableLender.sol)
 
 **Description:**
 UnstoppableLender contract uses depositTokens function to fund the pool and updates poolBalance variable accordingly. However one can send tokens to the contract without using depositTokens function causing poolBalance to be incorrect which leads to assertion in line40 being always false.
@@ -59,7 +59,7 @@ poolBalance has no good use in the contract and should be removed along with eve
 # How To Solve The Challenge
 send DamnValuableTokens to UnstoppableLender contract without using depositTokens function.
 
-**Context:** [`unstoppable.challenge.js#L41-L43`]
+**Context:** [`unstoppable.challenge.js#L41-L43`](https://github.com/tahos81/damn-vulnerable-defi-solutions/blob/master/test/unstoppable/unstoppable.challenge.js)
 
 ```javascript
 it('Exploit', async function () {

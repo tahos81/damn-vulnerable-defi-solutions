@@ -1,14 +1,15 @@
 ![](cover.png)
 
-**A set of challenges to hack implementations of DeFi in Ethereum.**
+**My solutions to the damn-vulnerable-defi CTF.**
 
-Featuring flash loans, price oracles, governance, NFTs, lending pools, smart contract wallets, timelocks, and more!
+Solutions live under test directory, reports are under audit_reports directory. I used spearbit's report template for the reports.
 
-Created by [@tinchoabbate](https://twitter.com/tinchoabbate)
+My twitter: [@0xTahos](https://twitter.com/0xTahos)
 
-## Play
+## Links
 
-Visit [damnvulnerabledefi.xyz](https://damnvulnerabledefi.xyz)
+Visit [damnvulnerabledefi.xyz](https://damnvulnerabledefi.xyz) to play yourself.
+Visit [spearbit](https://github.com/spearbit-audits/report-template) for the report template. 
 
 ## Disclaimer
 

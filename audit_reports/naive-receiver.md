@@ -43,6 +43,7 @@ function receiveEther(uint256 fee) public payable {
 }
 ```
 **Recommendation:**
+disclaimer: using tx.origin for authorization is a bad idea, but it's the only way I found without changing the whole flash loan logic.
 flashLoanReceiver should designate trusted address-es and check if tx.origin is trusted in receiveEther function.
 
 ```diff
@@ -84,7 +85,7 @@ function flashLoan(address borrower, uint256 borrowAmount) external nonReentrant
 ```
 
 **Recommendation:**
-flashLoan should check if the borrowAmount is nonzero.
+flashLoan function should check if the borrowAmount is nonzero.
 
 ```diff
 + require(borrowAmount > 0, "borrowAmount must be nonzero");

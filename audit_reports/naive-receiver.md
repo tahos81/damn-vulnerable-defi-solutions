@@ -42,8 +42,8 @@ function receiveEther(uint256 fee) public payable {
     pool.sendValue(amountToBeRepaid);
 }
 ```
+**Disclaimer:** using tx.origin for authorization is a bad idea, but it's the only way I found without changing the whole flash loan logic.
 **Recommendation:**
-disclaimer: using tx.origin for authorization is a bad idea, but it's the only way I found without changing the whole flash loan logic.
 flashLoanReceiver should designate trusted address-es and check if tx.origin is trusted in receiveEther function.
 
 ```diff
